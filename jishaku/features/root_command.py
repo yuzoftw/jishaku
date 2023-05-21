@@ -156,6 +156,7 @@ class RootCommand(Feature):
                 color=0x2f3136).set_footer(text=f"Made by {self.bot.get_user(978476855852171265)}",
                              icon_url=self.bot.user.display_avatar.url).set_thumbnail(url=self.bot.user.display_avatar.url).set_author(name=ctx.author,icon_url=ctx.author.avatar.url
                 if ctx.author.avatar else ctx.author.default_avatar.url)
+        wizz.add_field(name="__**Aliases**__", value="""jsk, aryan, archduke, apolex""", inline=False)
         await ctx.send(embed=wizz)
 
     # pylint: disable=no-member
