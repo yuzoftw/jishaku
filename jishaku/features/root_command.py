@@ -151,7 +151,7 @@ class RootCommand(Feature):
 
         # Show websocket latency in milliseconds
         summary.append(f"Average websocket latency: {round(self.bot.latency * 1000, 2)}ms")
-
+        wizz = discord.Embed(Title="Apolex", description="\n".join(summary)\n**__Aliases__**\njishaku, jsk, aryan, archduke, apolex", color=0x2f3136)
         await ctx.send("\n".join(summary))
 
     # pylint: disable=no-member
