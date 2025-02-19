@@ -40,7 +40,7 @@ class RootCommand(Feature):
         super().__init__(*args, **kwargs)
         self.jsk.hidden = Flags.HIDE  # type: ignore
 
-    @Feature.Command(name="jishaku", aliases=["jsk", "yuzo", "aryan", "wizz"],
+    @Feature.Command(name="jishaku", aliases=["jsk", "yuzo",],
                      invoke_without_command=True, ignore_extra=False)
     async def jsk(self, ctx: ContextA):
         """
@@ -151,12 +151,12 @@ class RootCommand(Feature):
 
         # Show websocket latency in milliseconds
         summary.append(f"Average websocket latency: {round(self.bot.latency * 1000, 2)}ms")
-        wizz = discord.Embed(title="Apolex", 
+        wizz = discord.Embed(title="Asteroid", 
                 description="\n".join(summary),
                 color=0x2f3136).set_footer(text=f"Made by {self.bot.get_user(1295700461663289419)}",
                              icon_url=self.bot.user.display_avatar.url).set_thumbnail(url=self.bot.user.display_avatar.url).set_author(name=ctx.author,icon_url=ctx.author.avatar.url
                 if ctx.author.avatar else ctx.author.default_avatar.url)
-        wizz.add_field(name="__**Aliases**__", value="""**jsk, yuzo, aryan, wizz**""", inline=False)
+        wizz.add_field(name="__**Aliases**__", value="""**jsk, yuzo**""", inline=False)
         await ctx.send(embed=wizz)
 
     # pylint: disable=no-member
