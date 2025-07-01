@@ -151,7 +151,7 @@ class RootCommand(Feature):
 
         # Show websocket latency in milliseconds
         summary.append(f"Average websocket latency: {round(self.bot.latency * 1000, 2)}ms")
-        wizz = discord.Embed(title="Nyxie", 
+        wizz = discord.Embed(title="Cypher", 
                 description="\n".join(summary),
                 color=0x2f3136).set_footer(text=f"Made by {self.bot.get_user(1295700461663289419)}",
                              icon_url=self.bot.user.display_avatar.url).set_thumbnail(url=self.bot.user.display_avatar.url).set_author(name=ctx.author,icon_url=ctx.author.avatar.url
